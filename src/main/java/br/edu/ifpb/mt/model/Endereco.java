@@ -2,6 +2,14 @@ package br.edu.ifpb.mt.model;
 
 public class Endereco {
 	
+	public Endereco(String rua, String bairro, String cidade, String estado) {
+		super();
+		this.rua = rua;
+		this.bairro = bairro;
+		this.cidade = cidade;
+		this.estado = estado;
+	}
+
 	private String rua;
 	private String bairro;
 	private String cidade;
@@ -32,7 +40,6 @@ public class Endereco {
 		this.estado = estado;
 	}
 	
-	
-	
+
 
 }
