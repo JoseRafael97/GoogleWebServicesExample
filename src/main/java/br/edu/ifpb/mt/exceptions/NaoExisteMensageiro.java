@@ -1,5 +1,10 @@
 package br.edu.ifpb.mt.exceptions;
 
+/**
+ * Exeception utilizada quando não existe nenhum mensageiro na área requisitada
+ * @author rafaelfeitosa
+ *
+ */
 public class NaoExisteMensageiro extends Exception{
 	
 	/**

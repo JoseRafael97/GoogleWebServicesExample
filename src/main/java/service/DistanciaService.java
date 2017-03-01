@@ -10,6 +10,11 @@ import br.edu.ifpb.mt.googlewebservices.GoogleWebServicesResponse;
 import br.edu.ifpb.mt.model.Endereco;
 import br.edu.ifpb.mt.model.Mensageiro;
 
+/**
+ * Service que lida com operações de distância
+ * @author rafaelfeitosa
+ *
+ */
 public class DistanciaService {
 
 	private List<Mensageiro> mensageiros;
@@ -23,6 +28,12 @@ public class DistanciaService {
 		addMensageiros();
 	}
 
+	/**
+	 * Filtra mensageiros que possuem endereços no mesmo bairro ou cidade do endereço passado.
+	 * @param enderecoDoador
+	 * @return
+	 * @throws NaoExisteMensageiro
+	 */
 	public List<Mensageiro> filtraMensageiroPorArea(Endereco enderecoDoador) throws NaoExisteMensageiro {
 		List<Mensageiro> mensageirosSelecionados = new ArrayList<>();
 		for (Mensageiro m : mensageiros) {
@@ -52,6 +63,12 @@ public class DistanciaService {
 
 	}
 
+	/**
+	 * Verificar qual o mensageiro cadastrado mais próximo do endereço passado.
+	 * @param endereco
+	 * @return
+	 * @throws Exception
+	 */
 	public Mensageiro verificaMensageiroMaisProximo(Endereco endereco) throws Exception {
 		List<Mensageiro> mensageirosSelecionados = filtraMensageiroPorArea(endereco);
 
@@ -87,6 +104,9 @@ public class DistanciaService {
 		return mensageiroMaisProximo;
 	}
 
+	/**
+	 * Método provisório que add alguns mensageiros para realização das operações
+	 */
 	private void addMensageiros() {
 		Endereco end1 = new Endereco("Leopoldino José Da Silva", "Centro", "Monteiro", "Paraíba");
 		mensageiros.add(new Mensageiro(end1));
@@ -99,6 +119,11 @@ public class DistanciaService {
 
 	}
 	
+	
+	/**
+	 * Método main para testar operações.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		DistanciaService distanciaService = new DistanciaService();
 		try {

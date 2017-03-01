@@ -1,5 +1,10 @@
 package br.edu.ifpb.mt.model;
 
+/**
+ * Modelo que representa um endereço de mensageiro ou doador.
+ * @author rafaelfeitosa
+ *
+ */
 public class Endereco {
 	
 	public Endereco(String rua, String bairro, String cidade, String estado) {

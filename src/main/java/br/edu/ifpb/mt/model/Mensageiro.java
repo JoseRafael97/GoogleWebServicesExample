@@ -1,5 +1,10 @@
 package br.edu.ifpb.mt.model;
 
+/**
+ * Modelo que representa um mensageiro do Ajude mais
+ * @author rafaelfeitosa
+ *
+ */
 public class Mensageiro {
 	
 	

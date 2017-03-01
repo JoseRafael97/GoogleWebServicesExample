@@ -5,6 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Modelo que representa um doador.
+ * @author rafaelfeitosa
+ *
+ */
 @Entity
 public class Doador {
 	
